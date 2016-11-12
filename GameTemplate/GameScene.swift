@@ -167,8 +167,6 @@ struct Game {
 
 class GameScene: SKScene {
 
-	var state: State?
-	var renderState: RenderState?
 	var game = Game()
 
 
@@ -291,8 +289,7 @@ class GameScene: SKScene {
 	// MARK: - Control
 
 	@objc func reset() {
-		state = nil
-		renderState = nil
+		game = Game()
 
 		removeAllChildren()
 		setupWorld()
